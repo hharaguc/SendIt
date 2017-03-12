@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					E4311E101E75FF2600FBDF9F = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = GRAXQY7GD5;
 						ProvisioningStyle = Automatic;
 					};
 					E4311E241E75FF2700FBDF9F = {
@@ -412,6 +413,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GRAXQY7GD5;
 				INFOPLIST_FILE = sendit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HH.sendit;
@@ -424,6 +426,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GRAXQY7GD5;
 				INFOPLIST_FILE = sendit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HH.sendit;
