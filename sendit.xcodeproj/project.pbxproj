@@ -15,6 +15,9 @@
 		E4311E1F1E75FF2700FBDF9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */; };
 		E4311E2A1E75FF2700FBDF9F /* senditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E291E75FF2700FBDF9F /* senditTests.swift */; };
 		E4311E351E75FF2700FBDF9F /* senditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E341E75FF2700FBDF9F /* senditUITests.swift */; };
+		E4311E441E760D1400FBDF9F /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E431E760D1400FBDF9F /* EventViewController.swift */; };
+		E4311E461E760F5700FBDF9F /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4311E451E760F5700FBDF9F /* Tutorial.storyboard */; };
+		E4311E481E7611EB00FBDF9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4311E471E7611EB00FBDF9F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		E4311E301E75FF2700FBDF9F /* senditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = senditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4311E341E75FF2700FBDF9F /* senditUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = senditUITests.swift; sourceTree = "<group>"; };
 		E4311E361E75FF2700FBDF9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4311E431E760D1400FBDF9F /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		E4311E451E760F5700FBDF9F /* Tutorial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
+		E4311E471E7611EB00FBDF9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D2159EFD633E2D4E721CC78 /* Pods_sendit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913268E7C75ACAC32FEC9658 /* Pods_senditTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +78,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD4085D3DE0259C5D687A5B /* Pods_senditUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4182D427D5CD6ECE13FF5775 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42D0ED1845EE1A7516788C93 /* Pods_sendit.framework */,
+				B1D71CE7A7D28616E79C95F6 /* Pods_senditTests.framework */,
+				2D884AE033A5B958F0485011 /* Pods_senditUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B489EF6EFEADF33D0880B79D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75CE3F80545C96DAE3ACBFC3 /* Pods-sendit.debug.xcconfig */,
+				3706A3CC6C8A8E642C84B4A1 /* Pods-sendit.release.xcconfig */,
+				82398E15A6B5B1389C3035CD /* Pods-senditTests.debug.xcconfig */,
+				15157665F31499C2BB0D8E2B /* Pods-senditTests.release.xcconfig */,
+				441E37F2A8DF50208337833C /* Pods-senditUITests.debug.xcconfig */,
+				A5E0B73CF5380872E5109A42 /* Pods-senditUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E4311E081E75FF2600FBDF9F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +115,8 @@
 				E4311E281E75FF2700FBDF9F /* senditTests */,
 				E4311E331E75FF2700FBDF9F /* senditUITests */,
 				E4311E121E75FF2700FBDF9F /* Products */,
+				B489EF6EFEADF33D0880B79D /* Pods */,
+				4182D427D5CD6ECE13FF5775 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,8 +138,11 @@
 				9738E0FA1E87005400155CF3 /* LoginViewController.swift */,
 				E4311E181E75FF2700FBDF9F /* Main.storyboard */,
 				E4311E1B1E75FF2700FBDF9F /* Assets.xcassets */,
+				E4311E471E7611EB00FBDF9F /* GoogleService-Info.plist */,
 				E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */,
 				E4311E201E75FF2700FBDF9F /* Info.plist */,
+				E4311E431E760D1400FBDF9F /* EventViewController.swift */,
+				E4311E451E760F5700FBDF9F /* Tutorial.storyboard */,
 			);
 			path = sendit;
 			sourceTree = "<group>";
@@ -135,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4311E391E75FF2700FBDF9F /* Build configuration list for PBXNativeTarget "sendit" */;
 			buildPhases = (
+				8F1CF6D969DF170C29A63AB7 /* [CP] Check Pods Manifest.lock */,
 				E4311E0D1E75FF2600FBDF9F /* Sources */,
 				E4311E0E1E75FF2600FBDF9F /* Frameworks */,
 				E4311E0F1E75FF2600FBDF9F /* Resources */,
+				AB3C658CB0058D8935320C32 /* [CP] Embed Pods Frameworks */,
+				5916561C8DD1316C6DD128F4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4311E3C1E75FF2700FBDF9F /* Build configuration list for PBXNativeTarget "senditTests" */;
 			buildPhases = (
+				EAB680935147248B7CCA661E /* [CP] Check Pods Manifest.lock */,
 				E4311E211E75FF2700FBDF9F /* Sources */,
 				E4311E221E75FF2700FBDF9F /* Frameworks */,
 				E4311E231E75FF2700FBDF9F /* Resources */,
+				D98E55F96490353771D6643A /* [CP] Embed Pods Frameworks */,
+				D323C5ED4E2F6C52FF24753F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4311E3F1E75FF2700FBDF9F /* Build configuration list for PBXNativeTarget "senditUITests" */;
 			buildPhases = (
+				E481A7D65F3C2CD0B617A710 /* [CP] Check Pods Manifest.lock */,
 				E4311E2C1E75FF2700FBDF9F /* Sources */,
 				E4311E2D1E75FF2700FBDF9F /* Frameworks */,
 				E4311E2E1E75FF2700FBDF9F /* Resources */,
+				2CB865159CB1296BFC56B269 /* [CP] Embed Pods Frameworks */,
+				1A272F07E659DE67496ED42F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +284,8 @@
 			files = (
 				E4311E1F1E75FF2700FBDF9F /* LaunchScreen.storyboard in Resources */,
 				E4311E1C1E75FF2700FBDF9F /* Assets.xcassets in Resources */,
+				E4311E481E7611EB00FBDF9F /* GoogleService-Info.plist in Resources */,
+				E4311E461E760F5700FBDF9F /* Tutorial.storyboard in Resources */,
 				E4311E1A1E75FF2700FBDF9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +306,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A272F07E659DE67496ED42F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-senditUITests/Pods-senditUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CB865159CB1296BFC56B269 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-senditUITests/Pods-senditUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5916561C8DD1316C6DD128F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sendit/Pods-sendit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F1CF6D969DF170C29A63AB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AB3C658CB0058D8935320C32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-sendit/Pods-sendit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D323C5ED4E2F6C52FF24753F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-senditTests/Pods-senditTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D98E55F96490353771D6643A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-senditTests/Pods-senditTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E481A7D65F3C2CD0B617A710 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB680935147248B7CCA661E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E4311E0D1E75FF2600FBDF9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +452,7 @@
 				9738E0FB1E87005400155CF3 /* LoginViewController.swift in Sources */,
 				E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */,
 				E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */,
+				E4311E441E760D1400FBDF9F /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +602,7 @@
 		};
 		E4311E3A1E75FF2700FBDF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75CE3F80545C96DAE3ACBFC3 /* Pods-sendit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GRAXQY7GD5;
@@ -428,6 +616,7 @@
 		};
 		E4311E3B1E75FF2700FBDF9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3706A3CC6C8A8E642C84B4A1 /* Pods-sendit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GRAXQY7GD5;
@@ -441,6 +630,7 @@
 		};
 		E4311E3D1E75FF2700FBDF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82398E15A6B5B1389C3035CD /* Pods-senditTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -455,6 +645,7 @@
 		};
 		E4311E3E1E75FF2700FBDF9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15157665F31499C2BB0D8E2B /* Pods-senditTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +660,7 @@
 		};
 		E4311E401E75FF2700FBDF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 441E37F2A8DF50208337833C /* Pods-senditUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = senditUITests/Info.plist;
@@ -482,6 +674,7 @@
 		};
 		E4311E411E75FF2700FBDF9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5E0B73CF5380872E5109A42 /* Pods-senditUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = senditUITests/Info.plist;
