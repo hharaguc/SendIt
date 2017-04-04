@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9738E0FB1E87005400155CF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738E0FA1E87005400155CF3 /* LoginViewController.swift */; };
 		E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E141E75FF2700FBDF9F /* AppDelegate.swift */; };
 		E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E161E75FF2700FBDF9F /* ViewController.swift */; };
 		E4311E1A1E75FF2700FBDF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4311E181E75FF2700FBDF9F /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9738E0FA1E87005400155CF3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4311E111E75FF2700FBDF9F /* sendit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sendit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4311E141E75FF2700FBDF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4311E161E75FF2700FBDF9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				E4311E141E75FF2700FBDF9F /* AppDelegate.swift */,
 				E4311E161E75FF2700FBDF9F /* ViewController.swift */,
+				9738E0FA1E87005400155CF3 /* LoginViewController.swift */,
 				E4311E181E75FF2700FBDF9F /* Main.storyboard */,
 				E4311E1B1E75FF2700FBDF9F /* Assets.xcassets */,
 				E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9738E0FB1E87005400155CF3 /* LoginViewController.swift in Sources */,
 				E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */,
 				E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */,
 			);
@@ -508,6 +512,7 @@
 				E4311E3B1E75FF2700FBDF9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4311E3C1E75FF2700FBDF9F /* Build configuration list for PBXNativeTarget "senditTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				E4311E3E1E75FF2700FBDF9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4311E3F1E75FF2700FBDF9F /* Build configuration list for PBXNativeTarget "senditUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				E4311E411E75FF2700FBDF9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
