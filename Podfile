@@ -6,6 +6,11 @@ target 'sendit' do
   use_frameworks!
 
   # Pods for sendit
+  pod 'Firebase'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'FirebaseUI', '~> 1.0'
 
   target 'senditTests' do
     inherit! :search_paths
@@ -16,5 +21,5 @@ target 'sendit' do
     inherit! :search_paths
     # Pods for testing
   end
-pod 'Firebase/Core'
+
 end

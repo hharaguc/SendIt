@@ -12,16 +12,16 @@ import FirebaseAuthUI
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
    
+   
    var userEmail = ""
    var userPassword = ""
    var user: FIRUser?
    
-   
    @IBOutlet weak var textFieldLoginEmail: UITextField!
    @IBOutlet weak var textFieldLoginPassword: UITextField!
    
-      
-   @IBOutlet weak var loginDidTouch: UIButton!
+   
+   @IBAction func loginDidTouch(_ sender: Any) {
       if textFieldLoginEmail.text == "" || textFieldLoginPassword.text == "" {
          let alertController = UIAlertController(title: "Oops!", message: "Please enter an email and password.", preferredStyle: .alert)
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -34,7 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
          FIRAuth.auth()?.signIn(withEmail: userEmail, password: userPassword, completion: { (user, error) in
             if error == nil {
                self.user = user
-               self.performSegue(withIdentifier: "mapViewIdentifier", sender: nil)
+               self.performSegue(withIdentifier: "goToTutorialViewController", sender: nil)
             }
             else {
                let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
@@ -45,8 +45,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
          })
       }
    }
-
-
    
    @IBAction func signUpDidTouch(_ sender: Any) {
       if textFieldLoginEmail.text == "" || textFieldLoginPassword.text == "" {
@@ -65,7 +63,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                self.textFieldLoginEmail.text = ""
                self.textFieldLoginPassword.text = ""
                self.user = user
-               self.performSegue(withIdentifier: "mapViewIdentifier", sender: nil)
+               let alertController = UIAlertController(title: "Congrats!", message: "You have successfully an account with the email address: \(self.textFieldLoginEmail.text)", preferredStyle: .alert)
+               let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+               alertController.addAction(defaultAction)
+               self.present(alertController, animated: true, completion: nil)
+               
+               self.performSegue(withIdentifier: "goToTutorialViewController", sender: nil)
             }
             else {
                let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
@@ -76,6 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
          })
       }
+      
    }
    
    //Calls this function when the tap is recognized.
@@ -86,16 +90,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    
    override func viewDidLoad() {
       super.viewDidLoad()
-      
-      let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-      view.addGestureRecognizer(tap)
-      
       FIRApp.configure()
-      //if there is a user logged in
-      if (FIRAuth.auth()?.currentUser) != nil {
+      
+      
+       let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+       view.addGestureRecognizer(tap)
+       
+       //if there is a user logged in
+       if (FIRAuth.auth()?.currentUser) != nil {
          self.user = FIRAuth.auth()?.currentUser
-         performSegue(withIdentifier: "mapViewIdentifier", sender: nil)
-      }
+         self.performSegue(withIdentifier: "goToTutorialViewController", sender: nil)
+       }
    }
    
    override func didReceiveMemoryWarning() {
@@ -110,11 +115,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    }
    
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if segue.identifier == "mapViewIdentifier" {
-         if let vc = segue.destination as? MainMapViewController {
-            vc.user = self.user!
-            vc.userEmail = self.userEmail
-         }
-      }
+      /*
+       if segue.identifier == "mapViewIdentifier" {
+       if let vc = segue.destination as? MainMapViewController {
+       vc.user = self.user!
+       vc.userEmail = self.userEmail
+       }
+       }
+       */
    }
+   
 }

@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9738E0FB1E87005400155CF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9738E0FA1E87005400155CF3 /* LoginViewController.swift */; };
+		1DA4B52041AEF130AF00FEF6 /* Pods_senditUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */; };
+		21C1ADC5A911DAE0C8A87FC0 /* Pods_senditTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */; };
+		7117F61F285E56BE296AD4D7 /* Pods_sendit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4921721A308A8E41F2E5F03 /* Pods_sendit.framework */; };
+		978878D51E95C9F2009835D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D41E95C9F2009835D6 /* LoginViewController.swift */; };
+		978878D71E95CD3C009835D6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D61E95CD3C009835D6 /* TutorialViewController.swift */; };
 		E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E141E75FF2700FBDF9F /* AppDelegate.swift */; };
 		E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E161E75FF2700FBDF9F /* ViewController.swift */; };
 		E4311E1A1E75FF2700FBDF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4311E181E75FF2700FBDF9F /* Main.storyboard */; };
@@ -38,7 +42,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9738E0FA1E87005400155CF3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1648F0DD869C9BF8E1FF8A5D /* Pods-sendit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sendit/Pods-sendit.debug.xcconfig"; sourceTree = "<group>"; };
+		260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senditTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3260868B878690FFE6A42F8E /* Pods-sendit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendit.release.xcconfig"; path = "Pods/Target Support Files/Pods-sendit/Pods-sendit.release.xcconfig"; sourceTree = "<group>"; };
+		945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senditUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		978878D41E95C9F2009835D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		978878D61E95CD3C009835D6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		9B5172443819BDFD2202C860 /* Pods-senditTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-senditTests/Pods-senditTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B90A8CF74D9F0CBD5F0C7EC2 /* Pods-senditTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-senditTests/Pods-senditTests.release.xcconfig"; sourceTree = "<group>"; };
+		C4921721A308A8E41F2E5F03 /* Pods_sendit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sendit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8F1FC065CFB05A9B4FA88D6 /* Pods-senditUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-senditUITests/Pods-senditUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DDCDE5493104EA60A31878C2 /* Pods-senditUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-senditUITests/Pods-senditUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4311E111E75FF2700FBDF9F /* sendit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sendit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4311E141E75FF2700FBDF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4311E161E75FF2700FBDF9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2159EFD633E2D4E721CC78 /* Pods_sendit.framework in Frameworks */,
+				7117F61F285E56BE296AD4D7 /* Pods_sendit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				913268E7C75ACAC32FEC9658 /* Pods_senditTests.framework in Frameworks */,
+				21C1ADC5A911DAE0C8A87FC0 /* Pods_senditTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCD4085D3DE0259C5D687A5B /* Pods_senditUITests.framework in Frameworks */,
+				1DA4B52041AEF130AF00FEF6 /* Pods_senditUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,9 +102,9 @@
 		4182D427D5CD6ECE13FF5775 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				42D0ED1845EE1A7516788C93 /* Pods_sendit.framework */,
-				B1D71CE7A7D28616E79C95F6 /* Pods_senditTests.framework */,
-				2D884AE033A5B958F0485011 /* Pods_senditUITests.framework */,
+				C4921721A308A8E41F2E5F03 /* Pods_sendit.framework */,
+				260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */,
+				945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,12 +112,12 @@
 		B489EF6EFEADF33D0880B79D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75CE3F80545C96DAE3ACBFC3 /* Pods-sendit.debug.xcconfig */,
-				3706A3CC6C8A8E642C84B4A1 /* Pods-sendit.release.xcconfig */,
-				82398E15A6B5B1389C3035CD /* Pods-senditTests.debug.xcconfig */,
-				15157665F31499C2BB0D8E2B /* Pods-senditTests.release.xcconfig */,
-				441E37F2A8DF50208337833C /* Pods-senditUITests.debug.xcconfig */,
-				A5E0B73CF5380872E5109A42 /* Pods-senditUITests.release.xcconfig */,
+				1648F0DD869C9BF8E1FF8A5D /* Pods-sendit.debug.xcconfig */,
+				3260868B878690FFE6A42F8E /* Pods-sendit.release.xcconfig */,
+				9B5172443819BDFD2202C860 /* Pods-senditTests.debug.xcconfig */,
+				B90A8CF74D9F0CBD5F0C7EC2 /* Pods-senditTests.release.xcconfig */,
+				C8F1FC065CFB05A9B4FA88D6 /* Pods-senditUITests.debug.xcconfig */,
+				DDCDE5493104EA60A31878C2 /* Pods-senditUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -135,8 +149,9 @@
 			children = (
 				E4311E141E75FF2700FBDF9F /* AppDelegate.swift */,
 				E4311E161E75FF2700FBDF9F /* ViewController.swift */,
-				9738E0FA1E87005400155CF3 /* LoginViewController.swift */,
 				E4311E181E75FF2700FBDF9F /* Main.storyboard */,
+				978878D61E95CD3C009835D6 /* TutorialViewController.swift */,
+				978878D41E95C9F2009835D6 /* LoginViewController.swift */,
 				E4311E1B1E75FF2700FBDF9F /* Assets.xcassets */,
 				E4311E471E7611EB00FBDF9F /* GoogleService-Info.plist */,
 				E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */,
@@ -449,8 +464,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9738E0FB1E87005400155CF3 /* LoginViewController.swift in Sources */,
+				978878D51E95C9F2009835D6 /* LoginViewController.swift in Sources */,
 				E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */,
+				978878D71E95CD3C009835D6 /* TutorialViewController.swift in Sources */,
 				E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */,
 				E4311E441E760D1400FBDF9F /* EventViewController.swift in Sources */,
 			);
@@ -602,7 +618,7 @@
 		};
 		E4311E3A1E75FF2700FBDF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75CE3F80545C96DAE3ACBFC3 /* Pods-sendit.debug.xcconfig */;
+			baseConfigurationReference = 1648F0DD869C9BF8E1FF8A5D /* Pods-sendit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GRAXQY7GD5;
@@ -616,7 +632,7 @@
 		};
 		E4311E3B1E75FF2700FBDF9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3706A3CC6C8A8E642C84B4A1 /* Pods-sendit.release.xcconfig */;
+			baseConfigurationReference = 3260868B878690FFE6A42F8E /* Pods-sendit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GRAXQY7GD5;
@@ -630,7 +646,7 @@
 		};
 		E4311E3D1E75FF2700FBDF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82398E15A6B5B1389C3035CD /* Pods-senditTests.debug.xcconfig */;
+			baseConfigurationReference = 9B5172443819BDFD2202C860 /* Pods-senditTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -645,7 +661,7 @@
 		};
 		E4311E3E1E75FF2700FBDF9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15157665F31499C2BB0D8E2B /* Pods-senditTests.release.xcconfig */;
+			baseConfigurationReference = B90A8CF74D9F0CBD5F0C7EC2 /* Pods-senditTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -660,7 +676,7 @@
 		};
 		E4311E401E75FF2700FBDF9F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 441E37F2A8DF50208337833C /* Pods-senditUITests.debug.xcconfig */;
+			baseConfigurationReference = C8F1FC065CFB05A9B4FA88D6 /* Pods-senditUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = senditUITests/Info.plist;
@@ -674,7 +690,7 @@
 		};
 		E4311E411E75FF2700FBDF9F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5E0B73CF5380872E5109A42 /* Pods-senditUITests.release.xcconfig */;
+			baseConfigurationReference = DDCDE5493104EA60A31878C2 /* Pods-senditUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = senditUITests/Info.plist;
