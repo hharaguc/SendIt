@@ -10,11 +10,11 @@
 		1DA4B52041AEF130AF00FEF6 /* Pods_senditUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */; };
 		21C1ADC5A911DAE0C8A87FC0 /* Pods_senditTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */; };
 		7117F61F285E56BE296AD4D7 /* Pods_sendit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4921721A308A8E41F2E5F03 /* Pods_sendit.framework */; };
+		976C65AD1E9C45C900B01E80 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C65AC1E9C45C900B01E80 /* NextViewController.swift */; };
 		978878D51E95C9F2009835D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D41E95C9F2009835D6 /* LoginViewController.swift */; };
-		978878D71E95CD3C009835D6 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D61E95CD3C009835D6 /* TutorialViewController.swift */; };
+		978878D91E95DCC6009835D6 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D81E95DCC6009835D6 /* TutorialPageViewController.swift */; };
+		978878DB1E96C24D009835D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 978878DA1E96C24D009835D6 /* Main.storyboard */; };
 		E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E141E75FF2700FBDF9F /* AppDelegate.swift */; };
-		E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E161E75FF2700FBDF9F /* ViewController.swift */; };
-		E4311E1A1E75FF2700FBDF9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4311E181E75FF2700FBDF9F /* Main.storyboard */; };
 		E4311E1C1E75FF2700FBDF9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4311E1B1E75FF2700FBDF9F /* Assets.xcassets */; };
 		E4311E1F1E75FF2700FBDF9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */; };
 		E4311E2A1E75FF2700FBDF9F /* senditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4311E291E75FF2700FBDF9F /* senditTests.swift */; };
@@ -46,8 +46,10 @@
 		260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senditTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3260868B878690FFE6A42F8E /* Pods-sendit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendit.release.xcconfig"; path = "Pods/Target Support Files/Pods-sendit/Pods-sendit.release.xcconfig"; sourceTree = "<group>"; };
 		945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senditUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		976C65AC1E9C45C900B01E80 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		978878D41E95C9F2009835D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		978878D61E95CD3C009835D6 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		978878D81E95DCC6009835D6 /* TutorialPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		978878DA1E96C24D009835D6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9B5172443819BDFD2202C860 /* Pods-senditTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-senditTests/Pods-senditTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B90A8CF74D9F0CBD5F0C7EC2 /* Pods-senditTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-senditTests/Pods-senditTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4921721A308A8E41F2E5F03 /* Pods_sendit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sendit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,8 +57,6 @@
 		DDCDE5493104EA60A31878C2 /* Pods-senditUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-senditUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-senditUITests/Pods-senditUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4311E111E75FF2700FBDF9F /* sendit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sendit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4311E141E75FF2700FBDF9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4311E161E75FF2700FBDF9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4311E191E75FF2700FBDF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4311E1B1E75FF2700FBDF9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4311E1E1E75FF2700FBDF9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4311E201E75FF2700FBDF9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,12 +147,12 @@
 		E4311E131E75FF2700FBDF9F /* sendit */ = {
 			isa = PBXGroup;
 			children = (
-				E4311E141E75FF2700FBDF9F /* AppDelegate.swift */,
-				E4311E161E75FF2700FBDF9F /* ViewController.swift */,
-				E4311E181E75FF2700FBDF9F /* Main.storyboard */,
-				978878D61E95CD3C009835D6 /* TutorialViewController.swift */,
+				978878DA1E96C24D009835D6 /* Main.storyboard */,
+				976C65AC1E9C45C900B01E80 /* NextViewController.swift */,
+				978878D81E95DCC6009835D6 /* TutorialPageViewController.swift */,
 				978878D41E95C9F2009835D6 /* LoginViewController.swift */,
 				E4311E1B1E75FF2700FBDF9F /* Assets.xcassets */,
+				E4311E141E75FF2700FBDF9F /* AppDelegate.swift */,
 				E4311E471E7611EB00FBDF9F /* GoogleService-Info.plist */,
 				E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */,
 				E4311E201E75FF2700FBDF9F /* Info.plist */,
@@ -298,10 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4311E1F1E75FF2700FBDF9F /* LaunchScreen.storyboard in Resources */,
+				978878DB1E96C24D009835D6 /* Main.storyboard in Resources */,
 				E4311E1C1E75FF2700FBDF9F /* Assets.xcassets in Resources */,
 				E4311E481E7611EB00FBDF9F /* GoogleService-Info.plist in Resources */,
 				E4311E461E760F5700FBDF9F /* Tutorial.storyboard in Resources */,
-				E4311E1A1E75FF2700FBDF9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,9 +464,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976C65AD1E9C45C900B01E80 /* NextViewController.swift in Sources */,
 				978878D51E95C9F2009835D6 /* LoginViewController.swift in Sources */,
-				E4311E171E75FF2700FBDF9F /* ViewController.swift in Sources */,
-				978878D71E95CD3C009835D6 /* TutorialViewController.swift in Sources */,
+				978878D91E95DCC6009835D6 /* TutorialPageViewController.swift in Sources */,
 				E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */,
 				E4311E441E760D1400FBDF9F /* EventViewController.swift in Sources */,
 			);
@@ -504,14 +504,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E4311E181E75FF2700FBDF9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4311E191E75FF2700FBDF9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

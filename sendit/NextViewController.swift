@@ -1,14 +1,18 @@
 //
-//  TutorialViewController.swift
+//  NextViewController.swift
 //  sendit
 //
-//  Created by John T. Jackson on 4/5/17.
+//  Created by John T. Jackson on 4/10/17.
 //  Copyright © 2017 Holly Haraguchi. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import FirebaseAuthUI
 
-class TutorialViewController: ViewController {
+class NextViewController: UIViewController {
+   
+   var user: FIRUser?
 
     override func viewDidLoad() {
         super.viewDidLoad()

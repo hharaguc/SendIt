@@ -20,21 +20,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    @IBOutlet weak var textFieldLoginEmail: UITextField!
    @IBOutlet weak var textFieldLoginPassword: UITextField!
    
-   
+   //action for login button
    @IBAction func loginDidTouch(_ sender: Any) {
+      //check if the user has input anything into the email and password space and give proper pop up if not
       if textFieldLoginEmail.text == "" || textFieldLoginPassword.text == "" {
          let alertController = UIAlertController(title: "Oops!", message: "Please enter an email and password.", preferredStyle: .alert)
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
          alertController.addAction(defaultAction)
          self.present(alertController, animated: true, completion: nil)
       }
+         
+         //verify email and password and notify user if there is an error
       else {
          userEmail = textFieldLoginEmail.text!
          userPassword = textFieldLoginPassword.text!
          FIRAuth.auth()?.signIn(withEmail: userEmail, password: userPassword, completion: { (user, error) in
             if error == nil {
                self.user = user
-               self.performSegue(withIdentifier: "goToTutorialViewController", sender: nil)
+               self.performSegue(withIdentifier: "goToNextView", sender: nil)
             }
             else {
                let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
@@ -47,12 +50,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    }
    
    @IBAction func signUpDidTouch(_ sender: Any) {
+      //check if the user has input anything into the email and password space and give proper pop up if not
       if textFieldLoginEmail.text == "" || textFieldLoginPassword.text == "" {
          let alertController = UIAlertController(title: "Oops!", message: "Please enter an email and password.", preferredStyle: .alert)
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
          alertController.addAction(defaultAction)
          self.present(alertController, animated: true, completion: nil)
       }
+         
+         //verify email and password and notify user if there is an error
       else {
          userEmail = textFieldLoginEmail.text!
          userPassword = textFieldLoginPassword.text!
@@ -68,7 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                alertController.addAction(defaultAction)
                self.present(alertController, animated: true, completion: nil)
                
-               self.performSegue(withIdentifier: "goToTutorialViewController", sender: nil)
+               self.performSegue(withIdentifier: "goToNextView", sender: nil)
             }
             else {
                let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
@@ -88,19 +94,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       view.endEditing(true)
    }
    
+   //call upon loading the view
    override func viewDidLoad() {
       super.viewDidLoad()
-      FIRApp.configure()
       
+      //configure keyboard dismissal
+      let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+      view.addGestureRecognizer(tap)
       
-       let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-       view.addGestureRecognizer(tap)
-       
-       //if there is a user logged in
-       if (FIRAuth.auth()?.currentUser) != nil {
+      //if there is a user logged in go to next view
+      if (FIRAuth.auth()?.currentUser) != nil {
+         print("in login view controller")
          self.user = FIRAuth.auth()?.currentUser
-         self.performSegue(withIdentifier: "goToTutorialViewController", sender: nil)
-       }
+         self.performSegue(withIdentifier: "goToNextView", sender: nil)
+      }
    }
    
    override func didReceiveMemoryWarning() {
@@ -108,21 +115,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
       // Dispose of any resources that can be recreated.
    }
    
-   func textFieldShouldReturn(_ textField: UITextField) -> Bool
-   {
+   //dismiss keyboard helper function
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
       self.view.endEditing(true)
       return false
    }
    
+   //pass user over to the next view
    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      /*
-       if segue.identifier == "mapViewIdentifier" {
-       if let vc = segue.destination as? MainMapViewController {
-       vc.user = self.user!
-       vc.userEmail = self.userEmail
-       }
-       }
-       */
+      if segue.identifier == "goToNextViewController" {
+         if let vc = segue.destination as? NextViewController {
+            vc.user = self.user!
+         }
+      }
    }
    
 }
