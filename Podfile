@@ -6,7 +6,6 @@ target 'sendit' do
   use_frameworks!
 
   # Pods for sendit
-  pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'

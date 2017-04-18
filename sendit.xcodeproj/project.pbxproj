@@ -10,6 +10,9 @@
 		1DA4B52041AEF130AF00FEF6 /* Pods_senditUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */; };
 		21C1ADC5A911DAE0C8A87FC0 /* Pods_senditTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */; };
 		7117F61F285E56BE296AD4D7 /* Pods_sendit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4921721A308A8E41F2E5F03 /* Pods_sendit.framework */; };
+		8C687A3A1E9DEBA2005631F7 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C687A391E9DEBA2005631F7 /* EventItem.swift */; };
+		8C687A3C1E9E03AD005631F7 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C687A3B1E9E03AD005631F7 /* EventTableViewCell.swift */; };
+		8C687A401E9E1DCB005631F7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C687A3F1E9E1DCB005631F7 /* User.swift */; };
 		976C65AD1E9C45C900B01E80 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976C65AC1E9C45C900B01E80 /* NextViewController.swift */; };
 		978878D51E95C9F2009835D6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D41E95C9F2009835D6 /* LoginViewController.swift */; };
 		978878D91E95DCC6009835D6 /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 978878D81E95DCC6009835D6 /* TutorialPageViewController.swift */; };
@@ -45,6 +48,9 @@
 		1648F0DD869C9BF8E1FF8A5D /* Pods-sendit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sendit/Pods-sendit.debug.xcconfig"; sourceTree = "<group>"; };
 		260B8A0D67B050BC06B02316 /* Pods_senditTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senditTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3260868B878690FFE6A42F8E /* Pods-sendit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendit.release.xcconfig"; path = "Pods/Target Support Files/Pods-sendit/Pods-sendit.release.xcconfig"; sourceTree = "<group>"; };
+		8C687A391E9DEBA2005631F7 /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
+		8C687A3B1E9E03AD005631F7 /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		8C687A3F1E9E1DCB005631F7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		945AE7D6CF4CA6437E9BF72A /* Pods_senditUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_senditUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		976C65AC1E9C45C900B01E80 /* NextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		978878D41E95C9F2009835D6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				978878DA1E96C24D009835D6 /* Main.storyboard */,
+				8C687A3B1E9E03AD005631F7 /* EventTableViewCell.swift */,
 				976C65AC1E9C45C900B01E80 /* NextViewController.swift */,
 				978878D81E95DCC6009835D6 /* TutorialPageViewController.swift */,
 				978878D41E95C9F2009835D6 /* LoginViewController.swift */,
@@ -157,6 +164,8 @@
 				E4311E1D1E75FF2700FBDF9F /* LaunchScreen.storyboard */,
 				E4311E201E75FF2700FBDF9F /* Info.plist */,
 				E4311E431E760D1400FBDF9F /* EventViewController.swift */,
+				8C687A391E9DEBA2005631F7 /* EventItem.swift */,
+				8C687A3F1E9E1DCB005631F7 /* User.swift */,
 				E4311E451E760F5700FBDF9F /* Tutorial.storyboard */,
 			);
 			path = sendit;
@@ -468,7 +477,10 @@
 				978878D51E95C9F2009835D6 /* LoginViewController.swift in Sources */,
 				978878D91E95DCC6009835D6 /* TutorialPageViewController.swift in Sources */,
 				E4311E151E75FF2700FBDF9F /* AppDelegate.swift in Sources */,
+				8C687A401E9E1DCB005631F7 /* User.swift in Sources */,
+				8C687A3C1E9E03AD005631F7 /* EventTableViewCell.swift in Sources */,
 				E4311E441E760D1400FBDF9F /* EventViewController.swift in Sources */,
+				8C687A3A1E9DEBA2005631F7 /* EventItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
