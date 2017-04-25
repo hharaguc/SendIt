@@ -47,13 +47,23 @@ class EventViewController: UITableViewController {
         let uploadedItem = items[indexPath.row]
         
         cell.textLabel?.text = uploadedItem.location
-        cell.detailTextLabel?.text = uploadedItem.name
+        cell.detailTextLabel?.text = uploadedItem.timeString
         
         //toggleCellCheckbox(cell, isCompleted: uploadedItem.completed)
         
         return cell
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowEventDetailsSegue" {
+            if let nextVC = segue.destination as? EventDetailsViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let event = items[indexPath.row]
+                    nextVC.event = event
+                }
+            }
+        }
+    }
     
 }
 
