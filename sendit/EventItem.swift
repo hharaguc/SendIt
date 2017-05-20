@@ -14,44 +14,49 @@ struct EventItem {
     
     /*
      * key: ignore
-     * name: description of event
-     * timeString: date and time of event
+     * description: description of event
+     * dateTime: date and time of event
      * location: location of event
      * ref: reference within the database. probably can just ignore
      * completed: ignore for now lel
      */
     let key: String
-    let name: String
-    let timeString: String
+    let description: String
+    let dateTime: String
     let location: String
     let ref: FIRDatabaseReference?
     var completed: Bool
+    var attending : [User] = []
+    var eventId : Int
     
-    init(name: String, timeString: String, location: String, completed: Bool, key: String = "") {
+    init(description: String, dateTime: String, location: String, completed: Bool, eventId: Int, key: String = "") {
         self.key = key
-        self.name = name
-        self.timeString = timeString
+        self.description = description
+        self.dateTime = dateTime
         self.location = location
         self.completed = completed
+        self.eventId = eventId
         self.ref = nil
     }
     
     init(snapshot: FIRDataSnapshot) {
         key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
-        name = snapshotValue["name"] as! String
-        timeString = snapshotValue["time"] as! String
+        description = snapshotValue["name"] as! String
+        dateTime = snapshotValue["time"] as! String
         location = snapshotValue["location"] as! String
         completed = snapshotValue["completed"] as! Bool
+        eventId = snapshotValue["eventId"] as! Int
         ref = snapshot.ref
     }
     
     func toAnyObject() -> Any {
         return [
-            "name": name,
-            "time": timeString,
+            "name": description,
+            "time": dateTime,
             "location": location,
-            "completed": completed
+            "completed": completed,
+            "eventId": eventId
         ]
     }
     
