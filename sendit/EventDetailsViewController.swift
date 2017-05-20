@@ -7,13 +7,30 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabaseUI
 
 class EventDetailsViewController: UIViewController {
     var event: EventItem!
-    
-    @IBAction func setResponse(_ sender: UIButton) {
-    }
+    var ref = FIRDatabase.database().reference()
+    let userID = FIRAuth.auth()?.currentUser?.uid
 
+    @IBAction func setResponse(_ sender: Any) {
+        ref.child("Users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let attending = value?["attending"] as? [Int]
+            let eventId = event.eventId
+            if attending.contains(eventId) {
+                attending.remove(at: attending.index(of: eventId))
+            }
+            else {
+                attending.append(eventId)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        ref.child("Users").child(userID!).setValue()
+    }
     @IBOutlet weak var rsvpButton: UIButton!
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
