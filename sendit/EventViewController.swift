@@ -47,7 +47,7 @@ class EventViewController: UITableViewController {
         let uploadedItem = items[indexPath.row]
         
         cell.textLabel?.text = uploadedItem.location
-        cell.detailTextLabel?.text = uploadedItem.timeString
+        cell.detailTextLabel?.text = uploadedItem.dateTime
         
         //toggleCellCheckbox(cell, isCompleted: uploadedItem.completed)
         
