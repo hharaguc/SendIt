@@ -41,8 +41,8 @@ class EventDetailsViewController: UIViewController {
         super.viewDidLoad()
  
         eventName.text = event.location
-        dateLabel.text = event.timeString
-        detailsLabel.text = event.name
+        dateLabel.text = event.dateTime
+        detailsLabel.text = event.description
     }
 
     override func didReceiveMemoryWarning() {
