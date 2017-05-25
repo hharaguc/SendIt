@@ -54,6 +54,7 @@ class EventViewController: UITableViewController {
         return cell
     }
     
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowEventDetailsSegue" {
             if let nextVC = segue.destination as? EventDetailsViewController {
@@ -64,6 +65,7 @@ class EventViewController: UITableViewController {
             }
         }
     }
+    */
     
 }
 
