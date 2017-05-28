@@ -50,42 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
    }
    
    @IBAction func signUpDidTouch(_ sender: Any) {
-      //check if the user has input anything into the email and password space and give proper pop up if not
-      if textFieldLoginEmail.text == "" || textFieldLoginPassword.text == "" {
-         let alertController = UIAlertController(title: "Oops!", message: "Please enter an email and password.", preferredStyle: .alert)
-         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-         alertController.addAction(defaultAction)
-         self.present(alertController, animated: true, completion: nil)
-      }
-         
-         //verify email and password and notify user if there is an error
-      else {
-         userEmail = textFieldLoginEmail.text!
-         userPassword = textFieldLoginPassword.text!
-         
-         FIRAuth.auth()?.createUser(withEmail: userEmail, password: userPassword, completion: { (user, error) in
-            
-            if error == nil {
-               self.textFieldLoginEmail.text = ""
-               self.textFieldLoginPassword.text = ""
-               self.user = user
-               let alertController = UIAlertController(title: "Congrats!", message: "You have successfully an account with the email address: \(self.textFieldLoginEmail.text)", preferredStyle: .alert)
-               let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-               alertController.addAction(defaultAction)
-               self.present(alertController, animated: true, completion: nil)
-               
-               self.performSegue(withIdentifier: "goToNextView", sender: nil)
-            }
-            else {
-               let alertController = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
-               let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-               alertController.addAction(defaultAction)
-               self.present(alertController, animated: true, completion: nil)
-               
-            }
-         })
-      }
-      
+      self.performSegue(withIdentifier: "goToSignup", sender: nil)
    }
    
    //Calls this function when the tap is recognized.
