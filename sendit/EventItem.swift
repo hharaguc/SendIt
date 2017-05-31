@@ -27,9 +27,9 @@ struct EventItem {
     let ref: FIRDatabaseReference?
     var completed: Bool
     var attending : [User] = []
-    var eventId : Int
+    var eventId : String
     
-    init(description: String, dateTime: String, location: String, completed: Bool, eventId: Int, key: String = "") {
+    init(description: String, dateTime: String, location: String, completed: Bool, eventId: String, key: String = "") {
         self.key = key
         self.description = description
         self.dateTime = dateTime
@@ -46,7 +46,7 @@ struct EventItem {
         dateTime = snapshotValue["time"] as! String
         location = snapshotValue["location"] as! String
         completed = snapshotValue["completed"] as! Bool
-        eventId = snapshotValue["eventId"] as! Int
+        eventId = snapshotValue["eventId"] as! String
         ref = snapshot.ref
     }
     
