@@ -63,9 +63,17 @@ class EventDetailsViewController: UIViewController {
         if let label = rsvpButton.title(for: .normal) {
             if label == "RSVP" {
                 rsvpButton.setTitle("un-RSVP", for: .normal)
+                let alertController = UIAlertController(title: "Thanks for RSVPing!", message: "We'll send you all the details 24 hours before the event.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Got it!", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
             }
             else {
                 rsvpButton.setTitle("RSVP", for: .normal)
+                let alertController = UIAlertController(title: "Sorry to see you go!", message: "Hopefully you can make the next one.", preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "Next time!", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
             }
         }
     }
