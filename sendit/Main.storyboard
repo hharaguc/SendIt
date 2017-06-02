@@ -454,7 +454,7 @@
                                 <state key="normal" title="RSVP"/>
                                 <connections>
                                     <action selector="rsvpClick:" destination="Tip-4q-PM2" eventType="touchUpInside" id="YBq-sF-6hw"/>
-                                    <action selector="setResponse:" destination="Tip-4q-PM2" eventType="touchUpInside" id="HDm-VA-RPl"/>
+                                    <action selector="setResponse:" destination="Tip-4q-PM2" eventType="touchUpInside" id="y2w-JP-ChX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji3-V8-SDB">
