@@ -13,7 +13,7 @@ import FirebaseDatabaseUI
 class EventDetailsViewController: UIViewController {
     var event: EventItem!
     let userID = FIRAuth.auth()?.currentUser?.uid
-    let ref = FIRDatabase.database().reference(withPath: "sendit/Users")
+    let ref = FIRDatabase.database().reference(withPath: "sendit/users")
     var attending: [String] = []
     
     @IBOutlet weak var rsvpButton: UIButton!
@@ -25,7 +25,7 @@ class EventDetailsViewController: UIViewController {
         var matchFound = false
         var idx = 0
         
-        let eventId = self.event.eventId
+        let eventKey = self.event.key
         
         /* Get the snapshot of the user object */
         ref.child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -36,8 +36,8 @@ class EventDetailsViewController: UIViewController {
              * Iterate over the events the user is currently RSVP'd for.
              * If the current event's ID is found, save its position in the array and raise the 'matchFound' flag.
              */
-            for curId in self.attending {
-                if curId == eventId {
+            for curKey in self.attending {
+                if curKey == eventKey {
                     matchFound = true
                     break
                 }
@@ -46,7 +46,7 @@ class EventDetailsViewController: UIViewController {
             
             /* Append/remove the event's ID to/from the attending array depending on their current RSVP response */
             if (!matchFound) {
-                self.attending.append(eventId)
+                self.attending.append(eventKey)
             }
             else {
                 self.attending.remove(at: idx)

@@ -33,20 +33,26 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            //let newUser = ref.child(firstNameField.text! + lastNameField.text!)
-            let newUser = ref.child(self.user!.uid)
-            inputDict["First Name"] = firstNameField.text!
-            inputDict["Last Name"] = lastNameField.text!
-            inputDict["Gender"] = genderField.text!
-            inputDict["Birthday"] = bdayField.text!
-            inputDict["Attending"] = "[]"
-            inputDict["Attended"] = "[]"
-            newUser.setValue(inputDict)
+//            let newUser = ref.child(firstNameField.text! + lastNameField.text!)
+
             
             FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
                 
                 if error == nil
                 {
+                    
+                    
+                    let newUser = self.ref.child((FIRAuth.auth()?.currentUser?.uid)!)
+                    newUser.setValue([
+                        "first": self.firstNameField.text!,
+                        "last": self.lastNameField.text!,
+                        "gender": self.genderField.text!,
+                        "email": self.emailField.text!,
+                        "birthday": self.bdayField.text!,
+                        "attending": [""],
+                        "attended": [""]
+                    ])
+                    
                     self.emailField.text = ""
                     self.passwordField.text = ""
                     self.firstNameField.text = ""
@@ -54,7 +60,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                     self.genderField.text = ""
                     self.bdayField.text = ""
                     self.user = user
-
+                    
                     let alertController = UIAlertController(title: "Congrats!", message: "You have successfully created your account!", preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: {
                         (_)in

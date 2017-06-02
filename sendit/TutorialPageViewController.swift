@@ -19,7 +19,6 @@ class TutorialPageViewController: UIPageViewController, UIPageViewControllerDele
    //create an array of all the view controllers
    lazy var VCArr: [UIViewController] = {
       return [self.VCInstance(name: "first"),
-              self.VCInstance(name: "second"),
               self.VCInstance(name: "third"),
               self.VCInstance(name: "fourth"),
               self.VCInstance(name: "fifth"),

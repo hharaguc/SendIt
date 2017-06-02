@@ -29,7 +29,7 @@ struct EventItem {
     var attending : [User] = []
     var eventId : String
     
-    init(description: String, dateTime: String, location: String, completed: Bool, eventId: String, key: String = "") {
+    init(description: String, dateTime: String, location: String, completed: Bool, eventId: String, key: String) {
         self.key = key
         self.description = description
         self.dateTime = dateTime
@@ -40,10 +40,10 @@ struct EventItem {
     }
     
     init(snapshot: FIRDataSnapshot) {
-        key = snapshot.key
         let snapshotValue = snapshot.value as! [String: AnyObject]
         description = snapshotValue["name"] as! String
         dateTime = snapshotValue["time"] as! String
+        key = snapshotValue["key"] as! String
         location = snapshotValue["location"] as! String
         completed = snapshotValue["completed"] as! Bool
         eventId = snapshotValue["eventId"] as! String
@@ -56,7 +56,8 @@ struct EventItem {
             "time": dateTime,
             "location": location,
             "completed": completed,
-            "eventId": eventId
+            "eventId": eventId,
+            "key": key
         ]
     }
     
